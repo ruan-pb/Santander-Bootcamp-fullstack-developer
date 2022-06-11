@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items</title>
+
+    <style>
+
+        .container{
+            max-width: 350px;
+            border: 2px solid black;
+            display: flex;
+
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+        .center{
+            align-items: center;
+        }
+
+
+        .flex{
+            flex: 1;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .start{
+            align-items: flex-start;
+        }
+        .end{
+            align-items: flex-end;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+        .column{
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section class="container flex">
+        <p>center</p>
+
+        <div class="item">Item 1</div>
+        <div class="item">Lorem Ipsum</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>stretch</p>
+    <section class="container stretch">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+    <p>start</p>
+    <section class="container start">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+    <p>start Column</p>
+    <section class="container start column">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+    <p>end</p>
+    <section class="container end">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+    <p>end Column</p>
+    <section class="container end column">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+    <p>baseline</p>
+    <section class="container baseline">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+    <p>baseline</p>
+    <section class="container baseline column">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+
+    </section>
+
+</body>
+</html>

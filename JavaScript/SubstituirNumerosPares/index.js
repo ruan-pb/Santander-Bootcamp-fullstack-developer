@@ -20,6 +20,6 @@ substituiNumerosPares([2, 0, 3, 5]);
 (
     function() {
     let name = "Ruan Cruz Soares da Silva"
-    return name
+    return name;
 }
 )();

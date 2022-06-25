@@ -32,4 +32,4 @@ function verificarValores (a,b){
     }
 }
 
-console.log(verificarValores(1,2));
+console.log(verificarValores(0,0));

@@ -30,3 +30,21 @@ function adicionarApendiceALista<T>(array:T[],valor: T){
 }
 
 
+
+interface Cachorro {
+    nome:string;
+    idade: number;
+    parqueFavorito?:string;
+}
+
+class meuCachorro implements Cachorro {
+    idade;
+    nome;
+
+    constructor(nome,idade){
+        this.idade= idade;
+        this.nome=nome;
+    }
+}
+
+const cao =  new meuCachorro('Ruan',5);

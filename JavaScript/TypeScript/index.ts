@@ -1,53 +1,32 @@
-function soma (a: number, b: number ){
-    return a + b;
+/*const input = document.getElementById('input') as HTMLInputElement;
+
+input.addEventListener('input',(event) => (
+    const i = event.currentTarget as HTMLInputElement;
+
+));*/
+function adicionarApendiceALista<T>(array:T[],valor: T){
+    return array.map(() => valor)
 }
 
-console.log(soma(5,15));
+ adicionarApendiceALista([1,2,3],2);
 
+ interface IUsuario{
+     id: string;
+     email: string;
+     cargo?: 'funcionario'|'gerente' | 'coodernador' | 'supervisor';
 
+ }
 
-interface IAnimal{
-    nome: string;
-    tipo:'terrestre' | 'aquatico';
-    domestico: boolean;
-    executarSom(alturaEmDecibés: number): void
-}
+ interface IAdmin {
+     cargo: 'gerente' | 'coodernador' | 'supervisor';
+ }
 
-interface IFelino extends IAnimal {
-    visaoNoturna: boolean
-}
-
-interface ICanino extends IAnimal {
-    porte: 'pequeno'|'medio'|'grande' 
-}
-
-type IDomestico = IFelino | ICanino;
-
-const animal: IAnimal = {
-    nome:'Elefante',
-    tipo:'terrestre',
-    executarSom: (alturaEmDecibés) => (`${alturaEmDecibés}DB`),
-    domestico:true
-
+ function redirecione (usuario: IUsuario ){
+    if(usuario.cargo){
+        //redirecione usuario
+    }     
+            //redirecione para area do usuario
 
 }
 
-const felino: IFelino = {
-    nome:'Leão',
-    tipo: "terrestre",
-    visaoNoturna: true,
-    executarSom: (alturaEmDecibés) => (`${alturaEmDecibés}DB`),
-    domestico:true
 
-
-}
-
-const animais: IDomestico = {
-    domestico: true,
-    nome:'Cachorro',
-    porte:'medio',
-    tipo:'terrestre',
-    visaoNoturna: true,
-    executarSom: (alturaEmDecibés) => (`${alturaEmDecibés}DB`),
-
-}

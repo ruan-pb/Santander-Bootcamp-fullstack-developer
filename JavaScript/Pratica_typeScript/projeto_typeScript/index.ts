@@ -96,7 +96,7 @@ InserirNotas(5,ALUNO_VALDIR); //Reprovado na modalidade EJA
 InserirNotas(5,ALUNO_VALDIR);
 
 let soma = 0;
-
+let media = 0;
 
 class verificarSituacaoDoAlunoDeAcordoComAsNotasEModalidade implements IAnalisarDadosDoEstudante{  //essa classe ficaria resposavel por todos os métodos
     
@@ -107,12 +107,13 @@ class verificarSituacaoDoAlunoDeAcordoComAsNotasEModalidade implements IAnalisar
                 soma += notasDeEstudantes.get[i].value;
             }
         }
+        media = soma / 3;
         if(!SituacaoDoEstudante.MATRICULADO || !SituacaoDoEstudante.APROVADO || !SituacaoDoEstudante.REPROVADO){
             console.log('Estudante não encontrado na turma')
 
         }
         if(aluno.turma.modalidade === ModalidadeDeNotas.NORMAL){
-            if(soma >= 7){
+            if(media >= 7){
                 return SituacaoDoEstudante.APROVADO;
             }
             else{
@@ -120,7 +121,7 @@ class verificarSituacaoDoAlunoDeAcordoComAsNotasEModalidade implements IAnalisar
             }
         }
         else if(aluno.turma.modalidade === ModalidadeDeNotas.EJA){
-            if(soma >= 6){
+            if(media >= 6){
                 return SituacaoDoEstudante.APROVADO
             }
             else{

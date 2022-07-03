@@ -1,16 +1,18 @@
 {
   "dependencies": {
+    "lite-server": "^2.6.1",
     "parcel-bundler": "^1.12.5"
-
-},
-  
-
-  
-
+  },
   "scripts": {
     "start": "parcel index.html"
-      }
-
-
+  },
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }
-  
